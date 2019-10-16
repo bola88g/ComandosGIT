@@ -1,0 +1,203 @@
+bolivar@Wardruna:~$ ls
+Descargas   examples.desktop  Plantillas                      snap
+Documentos  Imágenes          Primerosejerciciosphyton.ipynb  Untitled.ipynb
+Escritorio  Música            Público                         Vídeos
+bolivar@Wardruna:~$ cd Documentos/
+bolivar@Wardruna:~/Documentos$ ls
+bolivar@Wardruna:~/Documentos$ git init https://github.com/bola88g/ComandosGIT
+Inicializado repositorio Git vacío en /home/bolivar/Documentos/https:/github.com/bola88g/ComandosGIT/.git/
+bolivar@Wardruna:~/Documentos$ ls
+https:
+bolivar@Wardruna:~/Documentos$ rm -r https\:
+bolivar@Wardruna:~/Documentos$ mkdir ComandosGIT
+bolivar@Wardruna:~/Documentos$ cd ComandosGIT/
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git init
+Inicializado repositorio Git vacío en /home/bolivar/Documentos/ComandosGIT/.git/
+bolivar@Wardruna:~/Documentos/ComandosGIT$ ls
+bolivar@Wardruna:~/Documentos/ComandosGIT$ ls -al
+total 12
+drwxr-xr-x 3 bolivar bolivar 4096 oct 16 12:21 .
+drwxr-xr-x 3 bolivar bolivar 4096 oct 16 12:20 ..
+drwxr-xr-x 7 bolivar bolivar 4096 oct 16 12:21 .git
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git add README.md
+fatal: ruta especificada 'README.md' no concordó con ninguna carpeta
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git commit -m "Creacion"
+
+*** Por favor cuéntame quien eres.
+
+Corre
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Tu Nombre"
+
+para configurar la identidad por defecto de tu cuenta.
+Omite --global para configurar tu identidad solo en este repositorio.
+
+fatal: no es posible auto-detectar la dirección de correo (se obtuvo 'bolivar@Wardruna.(none)')
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git config --global user.email bola88_g@ciencias.unam.mx
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git config --global user.name bola88g
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git commit -m "Creacion"
+En la rama master
+
+Confirmación inicial
+
+nada para hacer commit
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git push origin master
+error: src refspec master does not match any.
+error: fallo el push de algunas referencias a 'origin'
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git status
+En la rama master
+
+No hay commits todavía
+
+no hay nada para confirmar (crea/copia archivos y usa "git add" para hacerles seguimiento)
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git add .
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git commit -m "Creacion"
+En la rama master
+
+Confirmación inicial
+
+nada para hacer commit
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git push origin master
+error: src refspec master does not match any.
+error: fallo el push de algunas referencias a 'origin'
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git remote add origin https://github.com/bola88g/ComandosGIT.git
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git push -u origin master
+error: src refspec master does not match any.
+error: fallo el push de algunas referencias a 'https://github.com/bola88g/ComandosGIT.git'
+bolivar@Wardruna:~/Documentos/ComandosGIT$ touch miPrograma.py
+bolivar@Wardruna:~/Documentos/ComandosGIT$ ls
+miPrograma.py
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git add miPrograma.py 
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git commit -m "Creacion de mi Programa"
+[master (commit-raíz) 86edba4] Creacion de mi Programa
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 miPrograma.py
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git push -u origin master
+Username for 'https://github.com': bola88g      
+Password for 'https://bola88g@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/bola88g/ComandosGIT.git/'
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git push -u origin master
+Username for 'https://github.com': bola88g       
+Password for 'https://bola88g@github.com': 
+Contando objetos: 3, listo.
+Escribiendo objetos: 100% (3/3), 227 bytes | 227.00 KiB/s, listo.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/bola88g/ComandosGIT.git
+ * [new branch]      master -> master
+Rama 'master' configurada para hacer seguimiento a la rama remota 'master' de 'origin'.
+bolivar@Wardruna:~/Documentos/ComandosGIT$ ls
+miPrograma.py
+bolivar@Wardruna:~/Documentos/ComandosGIT$ ls -al
+total 16
+drwxr-xr-x 3 bolivar bolivar 4096 oct 16 12:32 .
+drwxr-xr-x 3 bolivar bolivar 4096 oct 16 12:20 ..
+drwxr-xr-x 8 bolivar bolivar 4096 oct 16 12:28 .git
+-rw-rw-r-- 1 bolivar bolivar 1723 oct 16 12:32 .gitignore
+-rw-r--r-- 1 bolivar bolivar    0 oct 16 12:26 miPrograma.py
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git rm miPrograma.py 
+rm 'miPrograma.py'
+bolivar@Wardruna:~/Documentos/ComandosGIT$ ls
+bolivar@Wardruna:~/Documentos/ComandosGIT$ ls -al
+total 16
+drwxr-xr-x 3 bolivar bolivar 4096 oct 16 12:33 .
+drwxr-xr-x 3 bolivar bolivar 4096 oct 16 12:20 ..
+drwxr-xr-x 8 bolivar bolivar 4096 oct 16 12:33 .git
+-rw-rw-r-- 1 bolivar bolivar 1723 oct 16 12:32 .gitignore
+bolivar@Wardruna:~/Documentos/ComandosGIT$ touch otroPrograma.py
+bolivar@Wardruna:~/Documentos/ComandosGIT$ ls
+otroPrograma.py
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git add .
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git commit -m "Nuevo commit"
+[master 2810665] Nuevo commit
+ 2 files changed, 125 insertions(+)
+ create mode 100644 .gitignore
+ rename miPrograma.py => otroPrograma.py (100%)
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git push origin master
+Username for 'https://github.com': bola88g
+Password for 'https://bola88g@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/bola88g/ComandosGIT.git/'
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git push origin master
+Username for 'https://github.com': bola88g
+Password for 'https://bola88g@github.com': 
+Contando objetos: 3, listo.
+Delta compression using up to 4 threads.
+Comprimiendo objetos: 100% (3/3), listo.
+Escribiendo objetos: 100% (3/3), 1.17 KiB | 1.17 MiB/s, listo.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/bola88g/ComandosGIT.git
+   86edba4..2810665  master -> master
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git pull
+Ya está actualizado.
+bolivar@Wardruna:~/Documentos/ComandosGIT$ ls
+otroPrograma.py
+bolivar@Wardruna:~/Documentos/ComandosGIT$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Desempaquetando objetos: 100% (3/3), listo.
+Desde https://github.com/bola88g/ComandosGIT
+   2810665..d311915  master     -> origin/master
+Actualizando 2810665..d311915
+Fast-forward
+ README.md | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 README.md
+bolivar@Wardruna:~/Documentos/ComandosGIT$ ls
+otroPrograma.py  README.md
+bolivar@Wardruna:~/Documentos/ComandosGIT$ cd ..
+bolivar@Wardruna:~/Documentos$ ls
+ComandosGIT
+bolivar@Wardruna:~/Documentos$ git clone https://github.com/bola88g/PruebaGit-Github
+Clonando en 'PruebaGit-Github'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Desempaquetando objetos: 100% (6/6), listo.
+bolivar@Wardruna:~/Documentos$ ls
+ComandosGIT  PruebaGit-Github
+bolivar@Wardruna:~/Documentos$ cd PruebaGit-Github/
+bolivar@Wardruna:~/Documentos/PruebaGit-Github$ ls
+Primerosejerciciosphyton.ipynb  README.md
+bolivar@Wardruna:~/Documentos/PruebaGit-Github$ ls
+Primerosejerciciosphyton.ipynb  README.md  Twinkle.ipynb
+bolivar@Wardruna:~/Documentos/PruebaGit-Github$ cd ..
+bolivar@Wardruna:~/Documentos$ ls
+ComandosGIT  PruebaGit-Github
+bolivar@Wardruna:~/Documentos$ cd ..
+bolivar@Wardruna:~$ ls
+Descargas  Documentos  Escritorio  examples.desktop  Imágenes  Música  Plantillas  Primerosejerciciosphyton.ipynb  Público  snap  Vídeos
+bolivar@Wardruna:~$ mv Primerosejerciciosphyton.ipynb Documentos/
+ComandosGIT/      PruebaGit-Github/ 
+bolivar@Wardruna:~$ mv Primerosejerciciosphyton.ipynb Documentos/PruebaGit-Github/
+bolivar@Wardruna:~$ ls
+Descargas  Documentos  Escritorio  examples.desktop  Imágenes  Música  Plantillas  Público  snap  Vídeos
+bolivar@Wardruna:~$ cd Documentos/PruebaGit-Github/
+bolivar@Wardruna:~/Documentos/PruebaGit-Github$ ls
+Primerosejerciciosphyton.ipynb  README.md  Twinkle.ipynb
+bolivar@Wardruna:~/Documentos/PruebaGit-Github$ ls
+Primerosejerciciosphyton.ipynb  Pruebas.ipynb  README.md  Twinkle.ipynb
+bolivar@Wardruna:~/Documentos/PruebaGit-Github$ git add .
+bolivar@Wardruna:~/Documentos/PruebaGit-Github$ git commit -m "actaulizacion al 16/10/19"
+[master 806ba18] actaulizacion al 16/10/19
+ 5 files changed, 359 insertions(+)
+ create mode 100644 .ipynb_checkpoints/Primerosejerciciosphyton-checkpoint.ipynb
+ create mode 100644 .ipynb_checkpoints/Pruebas-checkpoint.ipynb
+ create mode 100644 .ipynb_checkpoints/Twinkle-checkpoint.ipynb
+ create mode 100644 Pruebas.ipynb
+ create mode 100644 Twinkle.ipynb
+bolivar@Wardruna:~/Documentos/PruebaGit-Github$ git push origin master
+Username for 'https://github.com': bola88g
+Password for 'https://bola88g@github.com': 
+Contando objetos: 4, listo.
+Delta compression using up to 4 threads.
+Comprimiendo objetos: 100% (4/4), listo.
+Escribiendo objetos: 100% (4/4), 843 bytes | 843.00 KiB/s, listo.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/bola88g/PruebaGit-Github
+   6899375..806ba18  master -> master
+bolivar@Wardruna:~/Documentos/PruebaGit-Github$ 
